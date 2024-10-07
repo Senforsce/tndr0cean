@@ -1,11 +1,11 @@
 module github.com/senforsce/tndr0cean
 
-go 1.21.6
+go 1.23
 
 require (
 	github.com/joho/godotenv v1.5.1
 	github.com/julienschmidt/httprouter v1.3.0
-	github.com/senforsce/tndr v0.0.5
+	github.com/senforsce/tndr v0.0.6
 	github.com/spf13/cobra v1.8.0
 )
 
