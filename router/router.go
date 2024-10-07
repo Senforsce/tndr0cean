@@ -6,14 +6,13 @@ import (
 	"errors"
 	"fmt"
 	"log"
-	"log/slog"
 	"net/http"
 	"os"
 	"strings"
 
 	"github.com/joho/godotenv"
 	"github.com/julienschmidt/httprouter"
-	"github.com/senforsce/tndr"
+	t1 "github.com/senforsce/tndr"
 )
 
 type Plug func(Handler) Handler
@@ -222,6 +221,6 @@ func (s *Tndr0cean) makeHTTPRouterHandle(h Handler, plugs ...Plug) httprouter.Ha
 }
 
 func defaultErrorHandler(err error, c *Context) error {
-	slog.Error("error", "err", err)
+	log.Println("error", "err", err)
 	return nil
 }
